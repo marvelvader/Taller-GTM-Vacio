@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Codigos | Taller Ninja GTM by Abel Zafra</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<meta name="tipoPagina" content="Contenido" />
+		<meta name="contenido" content="Códigos" />
+		<meta name="categoria" content="Taller Ninja">
+
+
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-YYYYY');</script>
+		<!-- End Google Tag Manager -->
+
+
+	</head>
+	<body class="subpage">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-YYYYY"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Taller GTM <span>by Abel Zafra</span></a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="pagina_larga.html">Página Larga</a></li>
+					<li><a href="codigos.html">Códigos</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>CÓDIGOS DE REFERENCIA</p>
+						<h2>VARIABLES, ETIQUETAS Y TRIGGERS</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<p>Pre-requisitos</p>
+								<h2>Inclusión de Google Tag Manager</h2>
+							</header>
+							<h3>Inclusión del código de Google Tag Manager</h3>
+							<p>Dentro del atributo <b>head</b> de nuestro html.</p>
+							<p>
+								<code>
+&lt;!-- Google Tag Manager --&gt;
+&lt;script&gt;
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXX');
+&lt;/script&gt;
+&lt;!-- End Google Tag Manager --&gt;
+								</code>
+							</p>
+							<p>
+							Dentro del atributo <b>body</b> de nuestro html.
+							</p>
+							<p>
+								<code>
+&lt;!-- Google Tag Manager (noscript) --&gt;
+&lt;noscript&gt;<br>&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXX"
+height="0" width="0" style="display:none;visibility:hidden"&gt;
+&lt;/iframe>&lt;/noscript&gt;
+&lt;!-- End Google Tag Manager (noscript) --&gt;
+								</code>
+							</p>
+
+							<h3>Función para obtención de metas</h3>
+							<p>
+								<code>
+function getMeta(metaName) {
+  const metas = document.getElementsByTagName('meta');
+  for (let i = 0; i < metas.length; i++) {
+    if (metas[i].getAttribute('name') === metaName) {
+      return metas[i].getAttribute('content');
+    }
+  }
+  return '';
+}
+								</code>
+							</p>
+
+							<!-- Etiquetas/Tags -->
+							<header class="align-center">
+								<p>Bibliografía de referencia</p>
+								<h2>Etiquetas/Tags</h2>
+							</header>
+							<h3>Check Variable tipoPagina</h3>
+							<p>
+								<b>Tipo de etiqueta:</b> <i>HTML Personalizado</i><br>
+								<b>Código:</b><br>
+								<code>
+&lt;script&gt;
+  (function() {
+    console.log({{TipoPagina}});
+  })();
+&lt;/script&gt;
+								</code>
+							</p>
+							<h3>Check Variable Titulo</h3>
+							<p>
+								<b>Tipo de etiqueta:</b> <i>HTML Personalizado</i><br>
+								<b>Código:</b><br>
+								<code>
+&lt;script&gt;
+  (function() {
+    console.log({{Titulo}});
+  })();
+&lt;/script&gt;
+								</code>
+							</p>
+							<h3>Check Evento Personalizado</h3>
+							<p>
+								<b>Tipo de etiqueta:</b> <i>HTML Personalizado</i><br>
+								<b>Código:</b><br>
+								<code>
+&lt;script&gt;
+  (function() {
+    console.log("Evento personalizado ejecutado con éxito");
+  })();
+&lt;/script&gt;
+								</code>
+							</p>
+							<h3>Inyección Evento Personalizado</h3>
+							<p>
+								<b>Tipo de etiqueta:</b> <i>HTML Personalizado</i><br>
+								<b>Código:</b><br>
+								<code>
+&lt;script type="text/javascript"&gt;
+  window.dataLayer = window.dataLayer || [];
+  dataLayer.push({
+  'event': 'Evento Personalizado'
+  });
+&lt;/script&gt;
+								</code>
+							</p>
+							<h3>Check Click Iconos</h3>
+							<p>
+								<b>Tipo de etiqueta:</b> <i>HTML Personalizado</i><br>
+								<b>Código:</b><br>
+								<code>
+&lt;script&gt;
+  (function() {
+    console.log("Click en icono");
+  })();
+&lt;/script&gt;
+								</code>
+							</p>
+							<h3>Medicion de Scroll</h3>
+							<p>
+								<b>Tipo de etiqueta:</b> <i>HTML Personalizado</i><br>
+								<b>Código:</b><br>
+								<code>
+&lt;script&gt;
+  (function() {
+    console.log({{Scroll Depth Threshold}});
+  })();
+&lt;/script&gt;
+								</code>
+							</p>
+
+							<!-- Activadores -->
+							<header class="align-center">
+								<p>Bibliografía de referencia</p>
+								<h2>Triggers/Activadores</h2>
+							</header>
+							<h3>Evento Personalizado</h3>
+							<p>
+								<b>Tipo de evento:</b> <i>Evento Personalizado</i><br>
+								<b>Nombre del evento:</b> <i>Evento Personalizado</i><br>
+								<b>Este activador se activa en:</b> <i>Todos los eventos personalizados</i>
+							</p>
+							<h3>Click en iconos</h3>
+							<p>
+								<b>Tipo de evento:</b> <i>Click - Solo enlaces</i><br>
+								<b>Nombre del evento:</b> <i>Click iconos footer</i><br>
+								<b>Este activador se activa en:</b> <i>Elegir variable integrada --> Click Classes | contiene | icon</i>
+							</p>
+							<h3>Scroll 25-50-75-100</h3>
+							<p>
+								<b>Tipo de evento:</b> <i>Profundidad de Desplazamiento</i><br>
+								<b>Profundidades de desplazamiento vertical:</b> <i>Porcentajes = 25,50,75,100</i><br>
+								<b>Este activador se activa en:</b> <i>Todas las páginas</i>
+							</p>
+
+
+							<!-- Variables -->
+							<header class="align-center">
+								<p>Bibliografía de referencia</p>
+								<h2>Variables</h2>
+							</header>
+							<h3>TipoPagina</h3>
+							<p>
+								<b>Tipo de etiqueta:</b> <i>Javascript Personalizado</i><br>
+								<b>Código:</b><br>
+								<code>
+function (){
+  return getMeta("tipoPagina");
+}	
+								</code>
+							</p>
+							<h3>Contenido</h3>
+							<p>
+								<b>Tipo de etiqueta:</b> <i>Javascript Personalizado</i><br>
+								<b>Código:</b><br>
+								<code>
+function (){
+  return getMeta("contenido");
+}
+								</code>
+							</p>
+							<h3>Categoria</h3>
+							<p>
+								<b>Tipo de etiqueta:</b> <i>Javascript Personalizado</i><br>
+								<b>Código:</b><br>
+								<code>
+function (){
+  return getMeta("categoria");
+}
+								</code>
+							</p>
+							<h3>Titulo</h3>
+							<p>
+								<b>Tipo de etiqueta:</b> <i>Javascript Personalizado</i><br>
+								<b>Código:</b><br>
+								<code>
+function (){
+    return document.title;
+}								
+								</code>
+							</p>
+							<h3>Activación de variables de desplazamiento</h3>
+							<p>
+								Pinchar en <b>Variables</b>, una vez ahí hay que pinchar en <b>Configurar</b> y una vez se muestre el listado, hay que bajar hasta encontrar las de desplazamiento y activar las 3 (<i>Scroll Depth Threshold, Scroll Depth Units</i> y <i>Scroll Direction</i>)
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#twitter" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#facebook" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#instagram" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#email" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Untitled. All rights reserved.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
